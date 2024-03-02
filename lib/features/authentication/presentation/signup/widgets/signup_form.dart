@@ -119,7 +119,7 @@ class _DSignupFormState extends State<DSignupForm> {
             decoration: InputDecoration(
               labelText: 'Phone Number',
               suffixIcon: const Icon(Iconsax.call),
-              prefixIcon: CustomPopupMenu(textWidget: Text(selectedCountryCode.toString()), onSelected: (String value) => setState(() => selectedCountryCode = value)),
+              prefixIcon: CustomPopupMenu(textWidget: Text(currentCountry == 'Egypt' ? selectedCountryCode.toString() : currentCountry == 'Saudi Arabia' || currentCountry == 'Saudi' ? '+966' : selectedCountryCode.toString()), onSelected: (String value) => setState(() => selectedCountryCode = value)),
             ),
             validator: (value) => DFormatter.formatPhoneNumber(value, selectedCountryCode),
           ),
