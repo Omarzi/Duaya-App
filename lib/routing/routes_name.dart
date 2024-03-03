@@ -19,6 +19,7 @@ class DRoutesName {
   static const String offersRoute = 'offers-route';
   static const String myScheduleOrderRoute = 'my-schedule-order-route';
   static const String currentOrdersRoute = 'current-orders-route';
+  static const String detailsProductRoute = 'details-product-route';
 
   /// More
   static const String termsAndConditionRoute = 'terms-and-conditions-route';

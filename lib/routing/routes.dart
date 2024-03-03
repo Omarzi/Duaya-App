@@ -4,6 +4,7 @@ import 'package:duaya_app/features/authentication/presentation/password_configur
 import 'package:duaya_app/features/authentication/presentation/password_configuration/reset_password.dart';
 import 'package:duaya_app/features/authentication/presentation/password_configuration/send_otp.dart';
 import 'package:duaya_app/features/authentication/presentation/signup/signup.dart';
+import 'package:duaya_app/features/home/presentation/details_product.dart';
 import 'package:duaya_app/features/onboarding/presentation/onboarding.dart';
 import 'package:duaya_app/features/splash/splash_screen.dart';
 import 'package:duaya_app/navigation_menu.dart';
@@ -74,6 +75,14 @@ class RouteGenerator {
       case DRoutesName.signupRoute:
         return PageTransition(
           child: const SignupScreen(),
+          type: PageTransitionType.fade,
+          settings: settings,
+          reverseDuration: const Duration(milliseconds: 250),
+        );
+
+      case DRoutesName.detailsProductRoute:
+        return PageTransition(
+          child: DetailsProduct(),
           type: PageTransitionType.fade,
           settings: settings,
           reverseDuration: const Duration(milliseconds: 250),

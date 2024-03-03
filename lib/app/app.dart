@@ -34,8 +34,8 @@ class DuayaApp extends StatelessWidget {
             // navigatorKey: navigatorKey,
             onGenerateRoute: RouteGenerator.getRoute,
             // initialRoute: ORoutesName.loginRoute,
-            initialRoute: DRoutesName.splashRoute,
-            // initialRoute: ORoutesName.onBoardingRoute,
+            // initialRoute: DRoutesName.splashRoute,
+            initialRoute: DRoutesName.navigationMenuRoute,
           ),
         );
       },

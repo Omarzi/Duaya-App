@@ -7,8 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../utils/constants/exports.dart';
 
-class OAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const OAppBar({
+class DAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const DAppBar({
     super.key,
     this.title,
     this.showBackArrow = false,

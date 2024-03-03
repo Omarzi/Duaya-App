@@ -27,19 +27,33 @@ class DImages {
   /// Upload Images
   static const String uploadImage = 'assets/lotties/uploadImage.json';
 
-  /// Cart Icons
+  /// Home Icons
+  static const String giftIcon = 'assets/images/jpegs/giftIcon.jpeg';
+
+  /// Icons
   static const String removeIcon = 'assets/images/svgs/removeIcon.svg';
+  static const String dollarIcon = 'assets/images/pngs/dollarIcon.png';
 
   /// Banners
-  static const String banner = 'assets/images/banner.png';
-  static const String banner2 = 'assets/images/banner2.jpg';
-  static const String banner3 = 'assets/images/banner3.png';
-  static const String banner4 = 'assets/images/banner4.png';
+  static const String banner = 'assets/images/jpegs/banner.jpeg';
+  static const String banner2 = 'assets/images/jpegs/banner2.jpeg';
+  static const String banner3 = 'assets/images/jpegs/banner3.jpeg';
+
+  /// Category
+  static const String medicine = 'assets/images/pngs/medicine.png';
+  static const String medicalSupplies = 'assets/images/pngs/medicalSupplies.png';
+  static const String beautyTools = 'assets/images/pngs/beautyTools.png';
+
+  /// Product
+  static const String product = 'assets/images/pngs/product.png';
+
 
   /// Programmer
   static const String callIcon = 'assets/images/svgs/call.svg';
   static const String facebookIcon = 'assets/images/svgs/facebook.svg';
   static const String whatsappIcon = 'assets/images/svgs/whatsapp.svg';
+
+
 
 
 }

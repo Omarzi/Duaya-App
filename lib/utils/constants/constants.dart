@@ -24,7 +24,6 @@ class DConstants {
     DImages.banner,
     DImages.banner2,
     DImages.banner3,
-    DImages.banner4,
   ];
 
   static List<String> texts = [
@@ -36,7 +35,6 @@ class DConstants {
     'Terms and conditions',
     'Share the app',
     'Application language',
-
   ];
 
   static List<String> images = [
@@ -48,6 +46,13 @@ class DConstants {
     'assets/images/fileIcon.png',
     'assets/images/sharingIcon.png',
     'assets/images/translateIcon.png',
+  ];
+
+
+  static List<String> categoryImage = [
+    DImages.medicine,
+    DImages.medicalSupplies,
+    DImages.beautyTools,
   ];
 
   static launchFacebookProfile({required String faceLink}) async {

@@ -1,8 +1,6 @@
 import 'dart:io';
-
 import 'package:duaya_app/common/widgets/custom_popup_menu/custom_popup_menu.dart';
 import 'package:duaya_app/features/authentication/presentation/signup/widgets/terms_conditions_checkbox.dart';
-import 'package:duaya_app/utils/constants/constants.dart';
 import 'package:duaya_app/utils/constants/image_strings.dart';
 import 'package:duaya_app/utils/constants/sizes.dart';
 import 'package:duaya_app/utils/formatters/formatter.dart';

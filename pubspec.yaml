@@ -78,6 +78,7 @@ flutter:
     - assets/lang/en.json
     - assets/images/pngs/
     - assets/images/svgs/
+    - assets/images/jpegs/
     - assets/images/pngs/social_images/
     - assets/images/on_boarding_images/
     - assets/images/pngs/on_boarding_images/

@@ -36,6 +36,7 @@ class DSizes {
 
   /// Image sizes
   static final double imageThumbSize = 80.h;
+  static final double imageSize = 40.w;
 
   /// Default spacing between sections
   static final double defaultSpace = 24.h;
