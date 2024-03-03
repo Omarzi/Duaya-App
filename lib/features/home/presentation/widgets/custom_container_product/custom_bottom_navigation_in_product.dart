@@ -15,6 +15,7 @@ class CustomBottomNavigationInProduct extends StatelessWidget {
       height: height / 4,
       child: Row(
         children: [
+
           CustomButtonWithIcon(textButton: "Add To Cart",width: width / 2.5,color: DColors.primary, onTap: () {},height: DSizes.imageSize * 1.4),
           const Spacer(),
           CustomButtonWithIcon(textButton: "Buy Now",width: width / 2.5,color: DColors.error2, onTap: () {},height: DSizes.imageSize * 1.4),
