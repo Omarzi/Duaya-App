@@ -3,6 +3,7 @@ class DImages {
   /// -- App Logos
   static const String appLogo = 'assets/images/pngs/app-logo.png';
   static const String appIcon = 'assets/images/pngs/appIcon.png';
+  static const String profileLogo = 'assets/images/jpegs/profileLogo.jpeg';
 
   /// -- OnBoarding Images
   static const String onBoardingImage1 = 'assets/images/on_boarding_images/sammy-line-searching.gif';
@@ -12,6 +13,11 @@ class DImages {
   /// -- Social Logos
   static const String google = 'assets/images/pngs/social_images/google-logo.png';
   static const String facebook = 'assets/images/pngs/social_images/facebook-logo.webp';
+
+  /// Companies
+  static const String sanofiBrand = 'assets/images/pngs/sanofiBrand.png';
+  static const String merckBrand = 'assets/images/pngs/merckBrand.png';
+  static const String gskBrand = 'assets/images/pngs/gskBrand.png';
 
   /// -- Animations
   static const String productsIllustration = 'assets/animations/sammy-line-workout.gif';
@@ -31,7 +37,7 @@ class DImages {
   static const String giftIcon = 'assets/images/jpegs/giftIcon.jpeg';
 
   /// Icons
-  static const String removeIcon = 'assets/images/svgs/removeIcon.svg';
+  static const String removeIcon = 'assets/images/pngs/remove.png';
   static const String dollarIcon = 'assets/images/pngs/dollarIcon.png';
 
   /// Banners
@@ -54,6 +60,12 @@ class DImages {
   static const String whatsappIcon = 'assets/images/svgs/whatsapp.svg';
 
 
+  static const String webApps = 'assets/images/pngs/webApps.png';
+  static const String mobileApps = 'assets/images/pngs/mobileApps.png';
 
-
+  /// Country
+  static const String saudiFlag = 'assets/images/pngs/saudi-arabia-flag.png';
+  static const String palestineFlag = 'assets/images/pngs/palestine-flag.png';
+  static const String egyptFlag = 'assets/images/pngs/egypt-flag.png';
+  static const String bahrainFlag = 'assets/images/pngs/bahrain-flag.png';
 }

@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomCategoryInHome extends StatelessWidget {
-  CustomCategoryInHome({Key? key, required this.categoryImage,required this.categoryName}) : super(key: key);
-  String categoryImage,categoryName;
+  final String categoryImage,categoryName;
+
+  const CustomCategoryInHome({Key? key, required this.categoryImage,required this.categoryName}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -14,12 +16,10 @@ class CustomCategoryInHome extends StatelessWidget {
         CircleAvatar(
           radius: 30.r,
           backgroundColor: DColors.grey3,
-          child: Center(
-            child: Image.asset(categoryImage,width: 30.w,),
-          ),
+          child: Center(child: Image.asset(categoryImage,width: 30.w)),
         ),
-         Text(categoryName,style: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 14.sp,fontWeight: FontWeight.w500)),
-        Text("60 Item",style: Theme.of(context).textTheme.titleSmall!.copyWith(color: DColors.grey))
+        Text(categoryName,style: Theme.of(context).textTheme.titleSmall!.copyWith(fontSize: 14.sp,fontWeight: FontWeight.w500)),
+        Text("60 Item",style: Theme.of(context).textTheme.titleSmall!.copyWith(color: DColors.grey2.withOpacity(.5), fontSize: 14.sp))
       ],
     );
   }

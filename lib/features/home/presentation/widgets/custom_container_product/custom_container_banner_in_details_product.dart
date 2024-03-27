@@ -3,6 +3,7 @@ import 'package:duaya_app/utils/constants/image_strings.dart';
 import 'package:duaya_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CustomContainerBannerInDetailsProduct extends StatelessWidget {
@@ -15,41 +16,41 @@ class CustomContainerBannerInDetailsProduct extends StatelessWidget {
     return Card(
       elevation: 5,
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: DSizes.spaceBtwItems * 1.5,horizontal: DSizes.spaceBtwItems),
+        padding: EdgeInsets.symmetric(vertical: DSizes.spaceBtwItems * 1.5, horizontal: DSizes.spaceBtwItems),
         decoration: BoxDecoration(
           color: DColors.white,
           borderRadius: BorderRadius.circular(DSizes.borderRadiusLg),
         ),
         child: Column(
           children: [
+            /// Product Image
             Padding(
               padding:  EdgeInsets.symmetric(horizontal: DSizes.spaceBtwTexts * 2),
               child: Row(
                 children: [
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: DSizes.spaceBtwTexts),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(DSizes.borderRadiusLg),
-                        color: DColors.error2
-                    ),
-                    child: Center(child: Text("-15%",style: Theme.of(context).textTheme.titleMedium!.copyWith(color: DColors.white),)),
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(DSizes.borderRadiusLg), color: DColors.error2),
+                    child: Center(child: Text("-15%",style: Theme.of(context).textTheme.titleMedium!.copyWith(color: DColors.white, fontSize: 15.sp))),
                   ),
-                  Spacer(),
-                  Icon(Icons.favorite_border),
+                  const Spacer(),
+                  Icon(Iconsax.heart, size: 23.sp)
                 ],
               ),
             ),
+
+            /// Circles
             SizedBox(
               height: 150.h,
               child: PageView.builder(
                 controller: controller,
-                // itemCount: pages.length,
                 itemBuilder: (_, index) {
                   return pages[index % pages.length];
                 },
               ),
             ),
-            SizedBox(height: DSizes.spaceBtwItems,),
+            SizedBox(height: DSizes.spaceBtwItems),
+
             Container(
               padding: EdgeInsets.all(DSizes.spaceBtwTexts * 1.2),
               decoration: BoxDecoration(

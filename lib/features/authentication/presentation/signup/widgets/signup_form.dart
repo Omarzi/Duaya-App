@@ -64,32 +64,6 @@ class _DSignupFormState extends State<DSignupForm> {
     return Form(
       child: Column(
         children: [
-          // /// First & Last Name
-          // Row(
-          //   children: [
-          //     Expanded(
-          //       child: TextFormField(
-          //         expands: false,
-          //         decoration: const InputDecoration(
-          //           labelText: 'First Name',
-          //           prefixIcon: Icon(Iconsax.user),
-          //         ),
-          //       ),
-          //     ),
-          //     SizedBox(width: DSizes.spaceBtwInputFields),
-          //     Expanded(
-          //       child: TextFormField(
-          //         expands: false,
-          //         decoration: const InputDecoration(
-          //           labelText: 'Last Name',
-          //           prefixIcon: Icon(Iconsax.user),
-          //         ),
-          //       ),
-          //     ),
-          //   ],
-          // ),
-          // SizedBox(height: DSizes.spaceBtwInputFields),
-
           /// Username
           TextFormField(
             expands: false,
@@ -123,11 +97,35 @@ class _DSignupFormState extends State<DSignupForm> {
           ),
           SizedBox(height: DSizes.spaceBtwInputFields),
 
+          /// Whats app Number
+          TextFormField(
+            controller: phoneController,
+            keyboardType: TextInputType.phone,
+            decoration: InputDecoration(
+              labelText: 'Whats App Number',
+              suffixIcon: const Icon(Iconsax.call),
+              prefixIcon: CustomPopupMenu(textWidget: Text(currentCountry == 'Egypt' ? selectedCountryCode.toString() : currentCountry == 'Saudi Arabia' || currentCountry == 'Saudi' ? '+966' : selectedCountryCode.toString()), onSelected: (String value) => setState(() => selectedCountryCode = value)),
+            ),
+            validator: (value) => DFormatter.formatPhoneNumber(value, selectedCountryCode),
+          ),
+          SizedBox(height: DSizes.spaceBtwInputFields),
+
           /// Password
           TextFormField(
             expands: false,
             decoration: const InputDecoration(
-              labelText: 'password',
+              labelText: 'Password',
+              prefixIcon: Icon(Iconsax.password_check),
+              suffixIcon: Icon(Iconsax.eye_slash),
+            ),
+          ),
+          SizedBox(height: DSizes.spaceBtwInputFields),
+
+          /// Confirm Password
+          TextFormField(
+            expands: false,
+            decoration: const InputDecoration(
+              labelText: 'Confirm password',
               prefixIcon: Icon(Iconsax.password_check),
               suffixIcon: Icon(Iconsax.eye_slash),
             ),

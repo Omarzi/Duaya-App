@@ -8,15 +8,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../utils/constants/exports.dart';
 
 class CustomButtonMajorInApp extends StatelessWidget {
-  const CustomButtonMajorInApp({super.key, required this.text});
+  CustomButtonMajorInApp({super.key, required this.text, this.onPressed, this.margin});
 
   final String text;
+  void Function()? onPressed;
+  double? margin;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: DDeviceUtils.getScreenWidth(context) * .06),
-      width: double.infinity, height: 50.h, child: ElevatedButton(onPressed: () => context.pushReplacementNamed(DRoutesName.navigationMenuRoute), child: Text(text, style: Theme.of(context).textTheme.titleMedium!.copyWith(color: DColors.white, height: .5.h),)),
+      margin: EdgeInsets.only(bottom: margin ?? 0),
+      width: double.infinity, height: 50.h, child: ElevatedButton(onPressed: onPressed, child: Text(text, style: Theme.of(context).textTheme.titleMedium!.copyWith(color: DColors.white, height: .5.h),)),
     );
   }
 }

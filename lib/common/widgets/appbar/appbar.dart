@@ -1,4 +1,5 @@
 import 'package:duaya_app/common/managers/language/language_cubit.dart';
+import 'package:duaya_app/utils/constants/colors.dart';
 import 'package:duaya_app/utils/device/device_utility.dart';
 import 'package:duaya_app/utils/helpers/navigation_extension.dart';
 import 'package:flutter/material.dart';
@@ -15,37 +16,31 @@ class DAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.centerTitle = false,
      this.leadingWidget,
     this.actions,
-    // this.leadingOnPressed,
+    this.bgColor,
+    this.arrowBackColor = false,
+    this.showBackGroundColor = false,
   });
 
   final Widget? title;
   final bool showBackArrow;
+  final bool showBackGroundColor;
   final bool centerTitle;
+  final bool arrowBackColor;
   // final IconData? leadingIcon;
   final List<Widget>? actions;
   // final VoidCallback? leadingOnPressed;
   final Widget? leadingWidget;
+  final Color? bgColor;
 
   @override
   Widget build(BuildContext context) {
-    // bool isEnglish = BlocProvider.of<LanguageCubit>(context).isEnglish;
-
     return Padding(
-      padding: EdgeInsets.only(left: showBackArrow ? 0 : 20.w, right:  showBackArrow ? 20 : 0.w),
+      padding: EdgeInsets.only(left: showBackArrow || showBackGroundColor ? 0 :  20.w, right: 0.w, top: 0.h),
       child: AppBar(
-          // flexibleSpace: Container(
-          //   decoration: showBackArrow ? BoxDecoration() : const BoxDecoration(
-          //     gradient: LinearGradient(
-          //       colors: [Color(0xFF2ED3C1), Color(0xFF33B4E5)],
-          //       begin: Alignment.centerLeft,
-          //       end: Alignment.centerRight,
-          //     ),
-          //   ),
-          // ),
-        // backgroundColor: Colors.redAccent,
+        backgroundColor: showBackGroundColor ? bgColor : DColors.white,
         automaticallyImplyLeading: false,
         leading: showBackArrow
-            ? IconButton(onPressed: () => context.pop(), icon: Icon(Iconsax.arrow_left))
+            ? IconButton(onPressed: () => context.pop(), icon: Icon(Iconsax.arrow_left, color: arrowBackColor ? DColors.white : DColors.black))
             :  leadingWidget,
         title: title,
         centerTitle: centerTitle,

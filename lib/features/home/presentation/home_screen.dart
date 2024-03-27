@@ -27,16 +27,15 @@ class HomeScreen extends StatelessWidget {
             /// Category
             Row(
               children: [
-                Text("Categories",
-                    style: Theme.of(context).textTheme.titleLarge),
-                Spacer(),
-                Text("see all", style: Theme.of(context).textTheme.titleSmall!.copyWith(color: DColors.primary)),
-                Icon(Icons.arrow_forward_ios,size: 15.sp,color: DColors.grey2,)
+                Text("Categories", style: Theme.of(context).textTheme.titleLarge),
+                const Spacer(),
+                Text("see all ", style: Theme.of(context).textTheme.titleSmall!.copyWith(color: DColors.primary)),
+                Icon(Icons.arrow_forward_ios, size: 12.sp, color: DColors.grey2)
               ],
             ),
             /// Make Space
-            SizedBox(height: DSizes.spaceBtwItems *2),
-            Row(
+            SizedBox(height: DSizes.spaceBtwItems * 1.2),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CustomCategoryInHome(
@@ -50,23 +49,22 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             /// Make Space
-            SizedBox(height: DSizes.spaceBtwItems *2),
+            SizedBox(height: DSizes.spaceBtwItems * 2),
             /// Best Offers
-            Text("Best Offers",
-                style: Theme.of(context).textTheme.titleLarge
-            ),
+            Text("Best Offers", style: Theme.of(context).textTheme.titleLarge),
             /// Make Space
-            SizedBox(height: DSizes.spaceBtwItems *2),
+            SizedBox(height: DSizes.spaceBtwItems * 1.2),
+            /// Products
             GridView.builder(
-            //  padding:  EdgeInsets.only(left:DSizes.spaceBetweenIcon ,right: DSizes.spaceBetweenIcon,),
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10.h,childAspectRatio: 1/2.2,),
               shrinkWrap: true,
               itemCount: 12,
               itemBuilder: (context, index) {
                  return GestureDetector(
-                     onTap: (){context.pushNamed(DRoutesName.detailsProductRoute);},
-                     child: CustomContainerProduct(productImage: DImages.product,productName: "Panadol Extra",companyName: "gsk company",rete: 4.5,));
+                     onTap: () => context.pushNamed(DRoutesName.detailsProductRoute),
+                     child: const CustomContainerProduct(productImage: DImages.product,productName: "Panadol Extra",companyName: "ODC Company.", rete: 4.5),
+                 );
               },
             ),
           ],

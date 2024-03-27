@@ -12,6 +12,7 @@ class DColors {
   static const Color silver = Color(0xff9C9C9C);
   static const Color whiteLevel = Color(0xffEBEBEB);
   static const Color blueColor = Color(0xff358FE1);
+  static const Color appBarColor = Color(0xffdf5346);
 
   /// Gradient Colors
   static const Gradient linerGradient = LinearGradient(
@@ -46,6 +47,7 @@ class DColors {
   /// Border Colors
   static const Color borderPrimary = Color(0xFFD9D9D9);
   static const Color borderSecondary = Color(0xFFE6E6E6);
+  static const Color borderTextFormField = Color(0xFFECECEC);
 
   /// Error and Validation Colors
   static const Color error = Color(0xFFD32F2F);

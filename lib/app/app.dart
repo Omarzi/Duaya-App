@@ -2,6 +2,7 @@ import 'package:duaya_app/common/managers/language/language_cubit.dart';
 import 'package:duaya_app/common/managers/navigation_menu/navigation_menu_cubit.dart';
 import 'package:duaya_app/features/onboarding/managers/onboarding_cubit/onboarding_cubit.dart';
 import 'package:duaya_app/main.dart';
+import 'package:duaya_app/features/settings/presentation/profile_info/profile_info_screen.dart';
 import 'package:duaya_app/routing/routes.dart';
 import 'package:duaya_app/routing/routes_name.dart';
 import 'package:duaya_app/utils/language/language_helper.dart';
@@ -31,11 +32,10 @@ class DuayaApp extends StatelessWidget {
             themeMode: ThemeMode.system,
             theme: DAppTheme.lightTheme(context),
             darkTheme: DAppTheme.darkTheme(context),
-            // navigatorKey: navigatorKey,
+            navigatorKey: navigatorKey,
             onGenerateRoute: RouteGenerator.getRoute,
-            // initialRoute: ORoutesName.loginRoute,
-            // initialRoute: DRoutesName.splashRoute,
-            initialRoute: DRoutesName.navigationMenuRoute,
+            initialRoute: DRoutesName.splashRoute,
+            // home: ProfileInfoScreen(),
           ),
         );
       },
